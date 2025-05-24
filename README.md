@@ -280,7 +280,6 @@ int main() {
 ![image](https://github.com/user-attachments/assets/7d4ecb28-ca03-4864-bb07-bd0de8a09238)
 
  
-
 ## RESULT
 
 Thus the C program to read and display an array of any 6 integer elements using pointer has been executed
