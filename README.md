@@ -165,37 +165,40 @@ Write C program for the below pyramid string pattern. Enter a string: PROGRAM En
 ## PROGRAM:
 ```
 #include <stdio.h>
-int main() 
-{
-    int rows, cols, i, j;
-    printf("Enter number of rows and columns: ");
-    scanf("%d %d", &rows, &cols);
-    int matrix[rows][cols];
-    printf("Enter the elements of the matrix:\n");
-    for (i = 0; i < rows; i++)
-    {
-        for (j = 0; j < cols; j++)
-        {
-            scanf("%d", &matrix[i][j]);
+#include <string.h>
+
+int main() {
+    char str[100];
+    int rows, i, j, k, len, space;
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    printf("Enter number of rows: ");
+    scanf("%d", &rows);
+
+    len = strlen(str);
+
+    for (i = 1; i <= rows; i++) {
+        space = rows - i;
+        for (k = 0; k < space; k++) {
+            printf(" ");
         }
-    }
-    printf("\nSum of each row:\n");
-    for (i = 0; i < rows; i++) 
-    {
-        int sum = 0;
-        for (j = 0; j < cols; j++)
-        {
-            sum += matrix[i][j];
+        for (j = 0; j < (2 * i - 1); j++) {
+            printf("%c", str[j % len]);
         }
-        printf("Sum of row %d = %d\n", i + 1, sum);
+        printf("\n");
     }
+
     return 0;
 }
+
 
 ```
 
  ## OUTPUT
-![image](https://github.com/user-attachments/assets/4cf3ce0b-3c33-4148-bfdd-085e67671ec4)
+![image](https://github.com/user-attachments/assets/8df5b0d5-20af-4384-b3aa-5953c987e783)
+
 
  
 
